@@ -1,0 +1,55 @@
+{% extends "site/base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="strip-i">
+  <h1 class="titles">{{qs.client}}<br><small>{{qs.title}}</small></h1>
+  <hr class="hrp">
+  <h4><small>Marketing Digital</small></h4>
+</div>
+<div class="strip-h">
+  <div class="container">
+    <div class="row justify-content-center mb-4">
+      <div class="col-md-10">
+        <h4 class="text-center">Descrição do projeto ...</h4>
+        <hr class="hro">
+      </div>
+    </div>
+    <div class="row justify-content-around">
+      <div class="col-md-5 mb-3">
+        <p class="text-justify">{{qs.description}}</p> <br>
+        <p><a class="btn btn-outline-secondary" href="{{qs.client_url}}" target="_blank" role="button">Visite {{qs.client}} &#8599;</a>
+        </p>
+      </div>
+      <div class="col-md-3 mb-3">
+        <h6 class="text-left"><small class="text-muted">Cliente:</small> <br>{{qs.client}}</h6>
+      </div>
+      <div class="col-md-3">
+        <h6 class=" text-left"><small class="text-muted">Soluções usadas:</small> <br>
+          <p>{{qs.soluctions}}</p>
+        </h6>
+        <p>&nbsp;</p>
+        <h6 class="text-left"><small class="text-muted">Data do projeto:</small> <br>
+          <p>{{qs.project_date}}</p>
+        </h6>
+      </div>
+    </div>
+    <hr>
+    <div class="row justify-content-center mb-4">
+      <div class="col-md-10">
+        <p class="text-right"><a href="javascript:history.back()"><img src="{% static 'images/back.png' %}" alt="voltar"></a></p>
+        <h4 class="text-center">Imagens do projeto ...</h4>
+        <hr class="hro">
+      </div>
+    </div>
+    <div class="row justify-content-around mb-3">
+      <div class="col-md-6 mb-3">
+        <img src="{{qs.cover1.url}}" class=" shadow-sm rounded mx-auto d-block img-fluid" alt="{{qs.client}}">
+      </div>
+      <div class="col-md-6 mb-3">
+        <img src="{{qs.cover2.url}}" class="shadow-sm rounded mx-auto d-block img-fluid" alt="{{qs.client}}">
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

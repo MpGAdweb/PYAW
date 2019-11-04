@@ -1,0 +1,115 @@
+{% extends "site/base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="strip-i">
+  <div class="container">
+    <h1>Website Design</h1>
+    <hr class="hrp">
+    <h4><small>Criação de Sites & Auditoria SEO</small></h4>
+  </div>
+</div>
+<div class="strip text-justify">
+  <div class="container-fluid">
+    <div class="row d-flex justify-content-around mt-3">
+      <div class="col-md-5">
+        <h3>No mundo digital, um site de sucesso é uma ferramenta essencial.</h3>
+      </div>
+      <div class="col-md-5">
+        <h4>A presença on-line da sua empresa.</h4>
+        <p class="justify">Nossos sites são incríveis, fáceis de usar e direcionam as operações de nossos clientes. Transformamos as experiências on-line porque nos orgulhamos de nosso trabalho e apoiamos nossos produtos.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="strip-h">
+  <div class="container">
+    <h2 class="text-center" id="WebDesign">Criação de Sites</h2>
+    <hr class="hrp">
+    <p>Especializado em projetar e desenvolver sites que empresas como a sua podem gerenciar e atualizar sem nenhum conhecimento técnico, usando sistemas de gerenciamento de conteúdo.</p>
+    <p>É importante para nós que nossos clientes possam competir on-line com um site que atenda às suas necessidades, sem custos exorbitantes de manutenção. Oferecemos uma variedade de soluções de suporte a sites para fornecer ao seu site a melhor
+      base
+      possível para impulsionar seus negócios.</p>
+    <p>Com mais de 60% dos visitantes navegando agora a partir de dispositivos móveis <small>(Ofcom, 2015)</small>, é essencial ter um site otimizado para smartphone ou tablet que permita que seus clientes acessem informações rapidamente sem a
+      necessidade de aumentar o zoom. <br> Todos os sites que desenvolvemos são compatíveis com dispositivos móveis, e seguem as diretrizes do Google, garantindo que você possa alcançar seus clientes em qualquer dispositivo.</p><a name=SEO></a>
+    <p class="example justify"><span class="lead">Análise SEO</span> <br>Identificamos se existem problemas de SEO no seu site que impeçam um melhor ranqueamento nos mecanismos de buscas. Como por ex.: Google, Bing e Yahoo. <br>A
+      análise e
+      os
+      relatórios são usados ​​para mostrar o desempenho de um site ou de qualquer campanha de marketing online</p>
+
+    <h4 class="text-center mb-4">Como é o desempenho de meu site?</h4>
+    <hr class="hrp">
+    <div class="row d-flex justify-content-around">
+      <div class="col-md-5">
+        <p class="justify">Existem ferramentas incríveis, como o Google Analytics e as Ferramentas do Google para webmasters, para medir o desempenho do seu site. Essas ferramentas são totalmente gratuitas e aqui, na MpG_\Adweb, são incorporadas
+          a todos os sites que criamos. A análise e os relatórios são utilizados para mostrar o desempenho de um site ou de qualquer campanha de marketing online.</p>
+      </div>
+      <div class="col-md-5">
+        <p class="justify">Apesar disso, não basta ter essas ferramentas integradas ao seu site, você deve saber ler e entender os dados também. Complexo? A MpG_\Adweb possui especialista certificado do Google Analytics para orientar seus interesses
+          no marketing on-line, com base em dados reais do seu público-alvo.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="strip">
+  <div class="container">
+    <h3>Solicite uma Auditoria SEO</h3>
+    <hr class="hrp">
+
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-success" role="alert">
+      {{ message }}
+    </div>
+    {% endfor %}
+    {% else %}
+
+    <form method="post">
+      {% csrf_token %}
+      <div class="form-row text-left">
+        <div class="col-md-4">
+          {{form.name|as_crispy_field}}
+        </div>
+        <div class="col-md-4">
+          {{form.email|as_crispy_field}}
+        </div>
+        <div class="col-md-4">
+          {{form.url|as_crispy_field}}
+        </div>
+      </div>
+      <button type="submit" class="btn btn-outline-secondary btn-block">Enviar</button>
+    </form>
+
+    {% endif %}
+
+  </div>
+</div>
+
+<div class="strip-h text-center mb-4">
+  <div class="container-fluid">
+    <div class="row no-gutters bg-white shadow">
+      <div class="col-md-6">
+        <div class="card-body">
+          <h5 class="card-title">Tenha um site do jeito que você imaginar!</h5>
+          <hr class="hrp">
+          <p class="card-text text-left">
+            <span class="lead"><small> &#8640; </small> Personalizado</span><br>
+            Tenha um site personalizado com design exclusivo para transmitir a identidade de sua marca, ou aperfeiçoamos seu site atual. Vamos trabalhar juntos para o seu
+            próximo projeto.
+          </p>
+          <p class="card-text text-left">
+            <span class="lead"> <small> &#8640; </small> Responsivo</span><br>
+            60% dos brasileiros usam um smartphone para fazer as buscas na internet. Nossos layouts seguem as diretrizes do Google (mobile-first).
+          </p>
+          <p class="card-text text-left">
+            <span class="lead"> <small> &#8640; </small> Otimizado</span><br>
+            Todos os nossos projetos são otimizados para SEO, todo o conteúdo é preparado para estar no topo do ranqueamento dos buscadores.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-6"> <img src="{% static 'images/computer.jpg' %}" class="img-fluid" alt="...">
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

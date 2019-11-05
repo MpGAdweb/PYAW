@@ -9,6 +9,7 @@ from django.contrib import messages
 
 # Create your views here.
 def index(request):
+    title = "MpG_\Adweb! SEO & Marketing Digital"
     if request.method == 'GET':
         form = ContactForm()
     else:
@@ -24,21 +25,24 @@ def index(request):
                 return HttpResponse('Invalid header found.')
             messages.success(request, 'Mensagem enviada com sucesso!')
             return redirect('index')
-    return render(request, "site/index.html", {'form': form})
+    return render(request, "site/index.html", {'form': form, 'title': title})
 
 def detail(request, slug):
+    title = "MpG_\Adweb! - Projetos"
     try:
         qs = Project.objects.get(slug = slug)
     except Project.DoesNotExist:
         raise Http404("Project does not exist")
     d_list = Project.objects.values_list('soluctions', flat=True).order_by('soluctions')
-    return render(request, 'Projects/projects.html', {"qs": qs, "d_list": d_list})
+    return render(request, 'Projects/projects.html', {'qs': qs, 'd_list': d_list, 'title': title})
 
 def about(request):
+    title = "MpG_\Adweb! - Sobre nós"
     qs = Project.objects.all()
-    return render(request, 'site/about.html', {"qs": qs})
+    return render(request, 'site/about.html', {"qs": qs, "title": title})
 
 def webdesign(request):
+    title = "MpG_\Adweb! - Criação de Sites"
     if request.method == 'GET':
         form = AuditForm()
     else:
@@ -54,18 +58,22 @@ def webdesign(request):
                 return HttpResponse('Invalid header found.')
             messages.success(request, 'Solicitação enviada!')
             return redirect('webdesign')
-    return render(request, 'site/webdesign.html', {'form': form})
+    return render(request, 'site/webdesign.html', {'form': form, 'title': title})
 
 def paidads(request):
-    return render(request, 'site/paidsearch.html')
+    title = "MpG_\Adweb! - Google Ads"
+    return render(request, 'site/paidsearch.html', {'title': title})
 
 def emkt(request):
-    return render(request, 'site/email-marketing.html')
+    title = "MpG_\Adweb! - Email Marketing"
+    return render(request, 'site/email-marketing.html', {'title': title})
 
 def iviusal(request):
-    return render(request, 'site/branding.html')
+    title = "MpG_\Adweb! - Identidade Visual"
+    return render(request, 'site/branding.html', {'title': title})
 
 def contactPage(request):
+    title = "MpG_\Adweb! - Fale Conosco"
     if request.method == 'GET':
         form = FormContact()
     else:
@@ -81,4 +89,23 @@ def contactPage(request):
                 return HttpResponse('Invalid header found.')
             messages.success(request, 'Formulário enviado!')
             return redirect('contact')
-    return render(request, 'site/contact.html', {'form': form})
+    return render(request, 'site/contact.html', {'form': form, 'title': title})
+
+def seopage(request):
+    title = "MpG_\Adweb! - Otimização SEO"
+    if request.method == 'GET':
+        form = AuditForm()
+    else:
+        form = AuditForm(request.POST)
+        if form.is_valid():
+            name = form.cleaned_data['name']
+            email = form.cleaned_data['email']
+            url = form.cleaned_data['url']
+            message = "{0} wrote it:\n\nURL: {1}\n\n".format(name, url)
+            try:
+                send_mail('Website Audit', message, email, ['pakexo1@gmail.com'])
+            except BadHeaderError:
+                return HttpResponse('Invalid header found.')
+            messages.success(request, 'Solicitação enviada!')
+            return redirect('webdesign')
+    return render(request, 'site/seo.html', {'form': form, 'title': title})

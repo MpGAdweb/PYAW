@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://mpgadweb.pythonanywhere.com/</loc>
+  <lastmod>2019-11-05T15:06:27+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://mpgadweb.pythonanywhere.com/Sobre</loc>
+  <lastmod>2019-11-05T15:06:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mpgadweb.pythonanywhere.com/Criacao-de-sites</loc>
+  <lastmod>2019-11-05T15:06:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mpgadweb.pythonanywhere.com/Links-Patrocinados</loc>
+  <lastmod>2019-11-05T15:06:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mpgadweb.pythonanywhere.com/Email-Marketing</loc>
+  <lastmod>2019-11-05T15:06:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mpgadweb.pythonanywhere.com/Identidade-Visual</loc>
+  <lastmod>2019-11-05T15:06:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mpgadweb.pythonanywhere.com/Contato</loc>
+  <lastmod>2019-11-05T15:06:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mpgadweb.pythonanywhere.com/Projects/contabilidade-brooklin/</loc>
+  <lastmod>2019-11-05T15:06:27+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mpgadweb.pythonanywhere.com/Projects/paisagro-poda-e-corte-de-arvores/</loc>
+  <lastmod>2019-11-05T15:06:27+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mpgadweb.pythonanywhere.com/Projects/prospery-espaco-terapeutico/</loc>
+  <lastmod>2019-11-05T15:06:27+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>

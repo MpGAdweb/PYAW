@@ -1,0 +1,93 @@
+{% extends "site/base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="strip-i">
+  <div class="container">
+    <h1>Otimização SEO</h1>
+    <hr class="hrp">
+    <h4><small>Auditoria & Local SEO</small></h4>
+  </div>
+</div>
+<div class="strip text-justify">
+  <div class="container-fluid">
+    <div class="row d-flex justify-content-around mt-3">
+      <div class="col-md-5">
+        <h3>Aumenta a visibilidade do seu site nas pesquisas do Google</h3>
+      </div>
+      <div class="col-md-5">
+        <h4>SEO local</h4>
+        <p class="justify">Aumente a visibilidade do seu negócio, colocando o seu site para o topo das listas locais. Se sua empresa é local, você precisa de tráfego geograficamente relevante através de classificações específicas para que seu negócio
+          seja encontrado pelo seu cliente alvo.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="strip-h">
+  <div class="container">
+    <h2 class="text-center">Otimização SEO</h2>
+    <hr class="hrp">
+    <p>Trabalhamos com uma estratégia de pesquisa SEO local adaptada à sua localização, para garantir que os sinais de localização externos corretos são enviados e revisar os sinais para o Google sobre os locais mais relevantes para sua empresa.
+      Usamos estratégias de marketing que permitem construir uma base de clientes mais forte para que seu negócio cresça organicamente. Destacamos atencão especial para obter classificações mais elevadas nos resultados de pesquisa locais, verificando
+      regularmente a origem do tráfego e reavaliando as informações para verificar a precisão. </p>
+    <p>Criamos perfis em plataformas populares na web e nos principais buscadores - ex.: Google Maps, Apple Maps e Bing Places - com ações de marketing dirigido, como promoções, novos serviços, horário de funcionamento em datas especiais, avaliações
+      de usuários, etc ...</p>
+  </div>
+</div>
+<div class="strip-h">
+  <div class="container">
+    <p class="example justify"><span class="lead">Análise SEO</span> <br>Identificamos se existem problemas de SEO no seu site que impeçam um melhor ranqueamento nos mecanismos de buscas. Como por ex.: Google, Bing e Yahoo. <br>A
+      análise e
+      os
+      relatórios são usados ​​para mostrar o desempenho de um site ou de qualquer campanha de marketing online</p>
+  </div>
+</div>
+<div class="strip">
+  <div class="container">
+    <h3>Solicite uma Auditoria SEO</h3>
+    <hr class="hrp">
+
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-success" role="alert">
+      {{ message }}
+    </div>
+    {% endfor %}
+    {% else %}
+
+    <form method="post">
+      {% csrf_token %}
+      <div class="form-row text-left">
+        <div class="col-md-4">
+          {{form.name|as_crispy_field}}
+        </div>
+        <div class="col-md-4">
+          {{form.email|as_crispy_field}}
+        </div>
+        <div class="col-md-4">
+          {{form.url|as_crispy_field}}
+        </div>
+      </div>
+      <button type="submit" class="btn btn-outline-secondary btn-block">Enviar</button>
+    </form>
+    {% endif %}
+  </div>
+</div>
+<div class="strip-h">
+  <div class="container">
+    <h4 class="text-center mb-4">Como é o desempenho de meu site?</h4>
+    <hr class="hrp">
+    <div class="row d-flex justify-content-around">
+      <div class="col-md-5">
+        <p class="justify">Existem ferramentas incríveis, como o Google Analytics e as Ferramentas do Google para webmasters, para medir o desempenho do seu site. Essas ferramentas são totalmente gratuitas e aqui, na MpG_\Adweb, são incorporadas
+          a todos os sites que criamos. A análise e os relatórios são utilizados para mostrar o desempenho de um site ou de qualquer campanha de marketing online.</p>
+      </div>
+      <div class="col-md-5">
+        <p class="justify">Apesar disso, não basta ter essas ferramentas integradas ao seu site, você deve saber ler e entender os dados também. Complexo? A MpG_\Adweb possui especialista certificado do Google Analytics para orientar seus interesses
+          no marketing on-line, com base em dados reais do seu público-alvo.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

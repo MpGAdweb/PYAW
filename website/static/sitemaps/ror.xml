@@ -6,7 +6,7 @@
 
 <item>
      <link>https://mpgadweb.pythonanywhere.com/</link>
-     <title>MpG_\Adweb! SEO &amp; Marketing Digital</title>
+     <title>MpG_\Adweb! SEO &amp;amp; Marketing Digital</title>
      <description>SEO &amp; Marketing Digital em São Paulo, criação de websites, landing page, otimização de sites, email marketing e anúncios Google ads.</description>
      <ror:updatePeriod></ror:updatePeriod>
      <ror:sortOrder>0</ror:sortOrder>
@@ -14,7 +14,7 @@
 </item>
 <item>
      <link>https://mpgadweb.pythonanywhere.com/Sobre</link>
-     <title>MpG_\Adweb! SEO &amp; Marketing Digital</title>
+     <title>MpG_\Adweb! - Sobre nós</title>
      <description>SEO &amp; Marketing Digital em São Paulo, criação de websites, landing page, otimização de sites, email marketing e anúncios Google ads.</description>
      <ror:updatePeriod></ror:updatePeriod>
      <ror:sortOrder>1</ror:sortOrder>
@@ -22,7 +22,7 @@
 </item>
 <item>
      <link>https://mpgadweb.pythonanywhere.com/Criacao-de-sites</link>
-     <title>MpG_\Adweb! SEO &amp; Marketing Digital</title>
+     <title>MpG_\Adweb! - Criação de Sites</title>
      <description>SEO &amp; Marketing Digital em São Paulo, criação de websites, landing page, otimização de sites, email marketing e anúncios Google ads.</description>
      <ror:updatePeriod></ror:updatePeriod>
      <ror:sortOrder>1</ror:sortOrder>
@@ -30,7 +30,7 @@
 </item>
 <item>
      <link>https://mpgadweb.pythonanywhere.com/Links-Patrocinados</link>
-     <title>MpG_\Adweb! SEO &amp; Marketing Digital</title>
+     <title>MpG_\Adweb! - Google Ads</title>
      <description>SEO &amp; Marketing Digital em São Paulo, criação de websites, landing page, otimização de sites, email marketing e anúncios Google ads.</description>
      <ror:updatePeriod></ror:updatePeriod>
      <ror:sortOrder>1</ror:sortOrder>
@@ -38,7 +38,7 @@
 </item>
 <item>
      <link>https://mpgadweb.pythonanywhere.com/Email-Marketing</link>
-     <title>MpG_\Adweb! SEO &amp; Marketing Digital</title>
+     <title>MpG_\Adweb! - Email Marketing</title>
      <description>SEO &amp; Marketing Digital em São Paulo, criação de websites, landing page, otimização de sites, email marketing e anúncios Google ads.</description>
      <ror:updatePeriod></ror:updatePeriod>
      <ror:sortOrder>1</ror:sortOrder>
@@ -46,7 +46,15 @@
 </item>
 <item>
      <link>https://mpgadweb.pythonanywhere.com/Identidade-Visual</link>
-     <title>MpG_\Adweb! SEO &amp; Marketing Digital</title>
+     <title>MpG_\Adweb! - Identidade Visual</title>
+     <description>SEO &amp; Marketing Digital em São Paulo, criação de websites, landing page, otimização de sites, email marketing e anúncios Google ads.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://mpgadweb.pythonanywhere.com/Otimizacao-SEO</link>
+     <title>MpG_\Adweb! - Otimização SEO</title>
      <description>SEO &amp; Marketing Digital em São Paulo, criação de websites, landing page, otimização de sites, email marketing e anúncios Google ads.</description>
      <ror:updatePeriod></ror:updatePeriod>
      <ror:sortOrder>1</ror:sortOrder>
@@ -54,7 +62,7 @@
 </item>
 <item>
      <link>https://mpgadweb.pythonanywhere.com/Contato</link>
-     <title>MpG_\Adweb! SEO &amp; Marketing Digital</title>
+     <title>MpG_\Adweb! - Fale Conosco</title>
      <description>SEO &amp; Marketing Digital em São Paulo, criação de websites, landing page, otimização de sites, email marketing e anúncios Google ads.</description>
      <ror:updatePeriod></ror:updatePeriod>
      <ror:sortOrder>1</ror:sortOrder>
@@ -62,7 +70,7 @@
 </item>
 <item>
      <link>https://mpgadweb.pythonanywhere.com/Projects/contabilidade-brooklin/</link>
-     <title>MpG_\Adweb! SEO &amp; Marketing Digital</title>
+     <title>MpG_\Adweb! - Projetos</title>
      <description>SEO &amp; Marketing Digital em São Paulo, criação de websites, landing page, otimização de sites, email marketing e anúncios Google ads.</description>
      <ror:updatePeriod></ror:updatePeriod>
      <ror:sortOrder>2</ror:sortOrder>
@@ -70,7 +78,7 @@
 </item>
 <item>
      <link>https://mpgadweb.pythonanywhere.com/Projects/paisagro-poda-e-corte-de-arvores/</link>
-     <title>MpG_\Adweb! SEO &amp; Marketing Digital</title>
+     <title>MpG_\Adweb! - Projetos</title>
      <description>SEO &amp; Marketing Digital em São Paulo, criação de websites, landing page, otimização de sites, email marketing e anúncios Google ads.</description>
      <ror:updatePeriod></ror:updatePeriod>
      <ror:sortOrder>2</ror:sortOrder>
@@ -78,7 +86,7 @@
 </item>
 <item>
      <link>https://mpgadweb.pythonanywhere.com/Projects/prospery-espaco-terapeutico/</link>
-     <title>MpG_\Adweb! SEO &amp; Marketing Digital</title>
+     <title>MpG_\Adweb! - Projetos</title>
      <description>SEO &amp; Marketing Digital em São Paulo, criação de websites, landing page, otimização de sites, email marketing e anúncios Google ads.</description>
      <ror:updatePeriod></ror:updatePeriod>
      <ror:sortOrder>2</ror:sortOrder>

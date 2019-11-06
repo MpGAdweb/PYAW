@@ -2,48 +2,49 @@
 {% load static %}
 {% load crispy_forms_tags %}
 {% block content %}
-<div class="cover-contact">
-  <div class="row min-vh-100 justify-content-center align-itens-center">
-    <div class="col-md-6 my-auto">
-      <h1>Contato</h1>
-      <hr class="hrp">
-      <p class="lead">Por favor, preencha o formulário para discutir seu projeto conosco. <br>Você receberá uma resposta o mais breve possível.</p>
-    </div>
-    <div class="col-md-6 my-auto">
-      <p>Gostaríamos muito de ouvir de você!</p>
-      <hr class="hrp">
+  <div class="cover-contact">
+    <div class="row min-vh-100 justify-content-center align-itens-center">
+      <div class="col-md-6 my-auto">
+        <h1 class="wow fadeInUp">Contato</h1>
+        <hr class="hrp">
+        <p class="lead wow fadeInDown" data-wow-delay="300ms">Por favor, preencha o formulário para discutir seu projeto conosco.
+          <br>Você receberá uma resposta o mais breve possível.</p>
+      </div>
+      <div class="col-md-6 my-auto wow fadeInUpBig" data-wow-delay="600ms">
+        <p>Gostaríamos muito de ouvir de você!</p>
+        <hr class="hrp">
 
-      {% if messages %}
-      {% for message in messages %}
-      <div class="alert alert-success" role="alert">
-        {{ message }}
-      </div>
-      {% endfor %}
-      {% else %}
-      <div class="container">
-        <form method="post">
-          {% csrf_token %}
-          <div class="form-row text-left">
-            <div class="col-md-10">
-              {{form.name|as_crispy_field}}
+        {% if messages %}
+          {% for message in messages %}
+            <div class="alert alert-success" role="alert">
+              {{ message }}
             </div>
-            <div class="col-md-5">
-              {{form.email|as_crispy_field}}
-            </div>
-            <div class="col-md-5">
-              {{form.phone|as_crispy_field}}
-            </div>
-            <div class="col-md-10">
-              {{form.message|as_crispy_field}}
-            </div>
+          {% endfor %}
+        {% else %}
+          <div class="container">
+            <form method="post">
+              {% csrf_token %}
+              <div class="form-row text-left">
+                <div class="col-md-10">
+                  {{form.name|as_crispy_field}}
+                </div>
+                <div class="col-md-5">
+                  {{form.email|as_crispy_field}}
+                </div>
+                <div class="col-md-5">
+                  {{form.phone|as_crispy_field}}
+                </div>
+                <div class="col-md-10">
+                  {{form.message|as_crispy_field}}
+                </div>
+              </div>
+              <div class="col-md-10 text-right">
+                <button type="submit" class="btn btn-secondary btn-lg">Enviar</button>
+              </div>
+            </form>
           </div>
-          <div class="col-md-10 text-right">
-            <button type="submit" class="btn btn-secondary btn-lg">Enviar</button>
-          </div>
-        </form>
+        {% endif %}
       </div>
-      {% endif %}
     </div>
   </div>
-</div>
 {% endblock content %}

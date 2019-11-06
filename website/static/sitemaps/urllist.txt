@@ -4,6 +4,7 @@ https://mpgadweb.pythonanywhere.com/Criacao-de-sites
 https://mpgadweb.pythonanywhere.com/Links-Patrocinados
 https://mpgadweb.pythonanywhere.com/Email-Marketing
 https://mpgadweb.pythonanywhere.com/Identidade-Visual
+https://mpgadweb.pythonanywhere.com/Otimizacao-SEO
 https://mpgadweb.pythonanywhere.com/Contato
 https://mpgadweb.pythonanywhere.com/Projects/contabilidade-brooklin/
 https://mpgadweb.pythonanywhere.com/Projects/paisagro-poda-e-corte-de-arvores/

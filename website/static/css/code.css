@@ -342,7 +342,7 @@ a:hover {
   background-color: rgba(52, 58, 64, 0.85)
 }
 .padbottom {
-  text-align: left;
+  text-align: center;
   /* text-indent: 2rem; */
   line-height: 1.5rem;
   padding: .25rem

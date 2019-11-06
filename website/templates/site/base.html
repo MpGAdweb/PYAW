@@ -3,6 +3,7 @@
 <html lang="pt-br">
 
   <head>
+    <script data-ad-client="ca-pub-9054313226548672" async="async" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -14,7 +15,10 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'css/code.min.css' %}">
 
-    <title>{% block title %}{{title}}{% endblock %}</title>
+    <title>
+      {% block title %}{{title}}
+      {% endblock %}
+    </title>
 
     <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicon/apple-touch-icon.png' %}">
     <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon/favicon-32x32.png' %}">
@@ -23,6 +27,7 @@
     <link rel="mask-icon" href="{% static 'favicon/safari-pinned-tab.svg' %}" color="#04151a">
     <meta name="msapplication-TileColor" content="#2b5797">
     <meta name="theme-color" content="#ffffff">
+
   </head>
 
   <body>
@@ -40,8 +45,12 @@
           </a>
           <div class="collapse navbar-collapse" id="hamb">
             <ul class="navbar-nav mx-auto padmenu justify-content-center">
-              <li class="nav-item"><a class="nav-link" href="{% url 'index' %}">Home</a></li>
-              <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">Sobre</a></li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'index' %}">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'about' %}">Sobre</a>
+              </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Serviços</a>
                 <div class="dropdown-menu padmenu" aria-labelledby="navbarDropdown">
@@ -50,64 +59,65 @@
                   <a class="dropdown-item" href="{% url 'emkt' %}">Email Marketing</a>
                   <a class="dropdown-item" href="{% url 'ivisual' %}">Identidade Visual</a>
                   <a class="dropdown-item" href="{% url 'seo' %}">Otimização SEO</a>
-                  <!-- <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Consultoria TI</a> -->
+                  <!-- <div class="dropdown-divider"></div> <a class="dropdown-item" href="#">Consultoria TI</a> -->
                 </div>
               </li>
-              <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contato</a></li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'contact' %}">Contato</a>
+              </li>
             </ul>
           </div>
         </nav>
       </div>
     </div>
-    {% block content %}
-    {% endblock %}
+    {% block content %}{% endblock %}
     <div class="bottom">
       <div class="container">
         <h3 class="mt-5">Assessoria & Desenvolvimento</h3>
         <hr class="hrp">
         <div class="row justify-content-md-around">
           <div class="col-md-3">
-            <ul class="list-inline">
+            <ul class="list-unstyled">
               <li>
                 <h5>WebDesign</h5>
               </li>
-              <li class="list-inline-item padbottom"><a href="{% url 'webdesign' %}">Criação de Sites</a></li>
-              <li class="list-inline-item padbottom"><a href="{% url 'webdesign' %}#Landing-page">Landing Pages</a></li>
-              <li class="list-inline-item padbottom"><a href="{% url 'webdesign' %}#Blog">Blog</a></li>
-              <li class="list-inline-item padbottom"><a href="{% url 'seo' %}">Otimização SEO</a></li>
+              <li class="padbottom"><a href="{% url 'webdesign' %}#Blog">Blog</a></li>
+              <li class="padbottom"><a href="{% url 'webdesign' %}">Criação de Sites</a></li>
+              <li class="padbottom"><a href="{% url 'webdesign' %}#Landing-page">Landing Pages</a></li>
+              <li class="padbottom"><a href="{% url 'seo' %}">Otimização SEO</a></li>
             </ul>
           </div>
           <div class="col-md-3">
-            <ul class="list-inline">
+            <ul class="list-unstyled">
               <li>
                 <h5>Marketing Digital</h5>
               </li>
-              <li class="list-inline-item padbottom"><a href="{% url 'emkt' %}">Email Marketing</a></li>
-              <li class="list-inline-item padbottom"><a href="{% url 'paidads' %}">Google Ads</a></li>
-              <li class="list-inline-item padbottom"><a href="{% url 'seo' %}">Organic Search</a></li>
+              <li class="padbottom"><a href="{% url 'emkt' %}">Email Marketing</a></li>
+              <li class="padbottom"><a href="{% url 'paidads' %}">Google Ads</a></li>
+              <li class="padbottom"><a href="{% url 'seo' %}">Organic Search</a>
+              </li>
             </ul>
           </div>
           <div class="col-md-3">
-            <ul class="list-inline">
+            <ul class="list-unstyled">
               <li>
                 <h5>Identidade Visual</h5>
               </li>
-              <li class="list-inline-item padbottom"><a href="{% url 'ivisual' %}">Logotipo</a></li>
-              <li class="list-inline-item padbottom"><a href="{% url 'ivisual' %}">Cartão de Visitas</a></li>
-              <li class="list-inline-item padbottom"><a href="{% url 'ivisual' %}">Material Gráfico</a></li>
-              <li class="list-inline-item padbottom"><a href="{% url 'ivisual' %}">Mala Direta</a></li>
+              <li class="padbottom"><a href="{% url 'ivisual' %}">Cartão de Visitas</a></li>
+              <li class="padbottom"><a href="{% url 'ivisual' %}">Logotipo</a></li>
+              <li class="padbottom"><a href="{% url 'ivisual' %}">Mala Direta</a></li>
+              <li class="padbottom"><a href="{% url 'ivisual' %}">Material Gráfico</a></li>
             </ul>
           </div>
           <div class="col-md-3">
-            <ul class="list-inline">
+            <ul class="list-unstyled">
               <li>
                 <h5>+ Serviços</h5>
               </li>
-              <li class="list-inline-item padbottom">Site SSL</li>
-              <li class="list-inline-item padbottom">Reg. Domínios</li>
-              <li class="list-inline-item padbottom">Hospedagem</li>
-              <li class="list-inline-item padbottom">Pacotes de Marketing</li>
+              <li class="padbottom">Certificado SSL</li>
+              <li class="padbottom">Hospedagem de Sites</li>
+              <li class="padbottom">Registro Domínios</li>
+              <li class="padbottom">Pacotes de Marketing</li>
 
             </ul>
           </div>
@@ -118,7 +128,9 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-md-auto">
-            <p class="padbottom">&copy;&nbsp;2019 | Design by <a href="mailto:mpgadweb@icloud.com">&nbsp;<img src="{% static 'images/MpG_White.png' %}" height="25" alt="MpG_\Adweb Marketing Digital"></a></p>
+            <p class="padbottom">&copy;&nbsp;2019 | Design by
+              <a href="mailto:mpgadweb@icloud.com">&nbsp;<img src="{% static 'images/MpG_White.png' %}" height="25" alt="MpG_\Adweb Marketing Digital"></a>
+            </p>
           </div>
         </div>
       </div>

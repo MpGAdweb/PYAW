@@ -2,209 +2,215 @@
 {% load static %}
 {% load crispy_forms_tags %}
 {% block content %}
-  <div class="cover">
-    <div class="container">
-      <h2 class="display-4 wow fadeInRightBig">SEO
-        <small>&</small><br>Marketing Digital<i>!</i>
-      </h2>
-      <p class="wow fadeInRightBig" data-wow-delay="400ms">Sua empresa no topo das pesquisas! Projetamos, Desenvolvemos e fornecemos suporte para sites!</p><br>
-      <a href="{% url 'paidads' %}">
-        <p class="lead wow fadeInRightBig" data-wow-delay=" 800ms">Anúncios Google Ads &#8599;</p>
-      </a>
+<div class="cover">
+  <div class="container">
+    <h2 class="display-4 wow fadeInRightBig">SEO
+      <small>&</small><br>Marketing Digital<i>!</i>
+    </h2>
+    <p class="wow fadeInRightBig" data-wow-delay="400ms">Sua empresa no topo das pesquisas! Projetamos, Desenvolvemos e fornecemos suporte para sites!</p><br>
+    <a href="{% url 'paidads' %}">
+      <p class="lead wow fadeInRightBig" data-wow-delay=" 800ms">Anúncios Google Ads &#8599;</p>
+    </a>
+  </div>
+</div>
+<div class="strip text-justify">
+  <div class="container-fluid">
+    <div class="row d-flex justify-content-around mt-5">
+      <div class="col-md-5 wow fadeInUp" data-wow-delay="300ms">
+        <h3>No mundo digital, um site de sucesso é uma ferramenta essencial.</h3>
+      </div>
+      <div class="col-md-5 wow fadeInUp" data-wow-delay="600ms">
+        <h4>A presença on-line da sua empresa.</h4>
+        <p class="text-justify">Nossos sites são incríveis, fáceis de usar e direcionam as operações de nossos clientes. Transformamos as experiências on-line porque nos orgulhamos de nosso trabalho e apoiamos nossos produtos.</p>
+      </div>
     </div>
   </div>
-  <div class="strip text-justify">
-    <div class="container-fluid">
-      <div class="row d-flex justify-content-around mt-5">
-        <div class="col-md-5 wow fadeInUp" data-wow-delay="300ms">
-          <h3>No mundo digital, um site de sucesso é uma ferramenta essencial.</h3>
+</div>
+<div class="strip-h shadow">
+  <div class="container">
+    <h3 class="text-center mb-4">Otimização para mecanismos de busca (SEO)</h3>
+    <hr class="hro">
+    <div class="row no-gutters d-flex justify-content-center align-items-start">
+      <div class="col-md-7">
+        <p class="wow fadeInUp">Você provavelmente se deparou com nosso site pesquisando Web Design, Web Developer ou algo similar. É isso que pretendemos fazer por você, atrair visitantes que procuram seus produtos ou serviços para seu site e ajudar
+          a expandir seus negócios.</p>
+        <p class="wow fadeInUp" data-wow-delay="200ms">Se você está procurando uma empresa de SEO para ajudá-lo a alcançar seus objetivos de negócios, veio ao lugar certo. Utilizamos apenas técnicas éticas de SEO e usamos boas pesquisas antiquadas
+          para
+          complementar ferramentas especializadas, para nos permitir criar uma estratégia vencedora para otimizar seu site.</p>
+        <p class="wow fadeInUp" data-wow-delay="300ms">O principal objetivo da otimização de mecanismo de pesquisa (SEO) é aumentar a posição do seu site nas páginas de resultados de mecanismos de pesquisa, o que resultará em mais tráfego.</p>
+        <p class="example wow fadeInUp" data-wow-delay="400ms">Exemplo:
+          <br>
+          <i>
+            Uma pessoa pode estar procurando ótimos lugares para comer no Brooklin. Se você é um restaurante e está no Brooklin e tem um site otimizado adequadamente, o site deve aparecer na primeira página ou nos dois primeiros resultados de cada
+            mecanismo de
+            pesquisa.</i>
+        </p>
+        <p class="wow fadeInUp" data-wow-delay="500ms">Se implementado dentro das diretrizes dos mecanismos de pesquisa, o SEO é endossado pelo Google e por outros mecanismos de pesquisa, pois resulta em páginas estruturadas de forma a facilitar o
+          trabalho
+          dos mecanismos de pesquisa e fornecer informações úteis aos visitantes. É uma situação em que todos saem ganhando!</p>
+        <p class="wow fadeInUp" data-wow-delay="600ms">Trabalharemos com você para criar uma estratégia para otimizar seu site. Isso pode ser implementado por nós ou podemos aconselhá-lo sobre como fazer as alterações necessárias no seu site para
+          melhorá-lo.
+          Quer o seu site tenha sido projetado pela MpGAdweb ou por outra agência ou designer freelancer, podemos ajudar a aumentar a presença do seu mecanismo de pesquisa.</p>
+      </div>
+      <div class="col-md-4 offset-md-1 text-center wow fadeInUp" data-wow-delay="300ms">
+        <h4>Dúvidas?</h4>
+        <hr class="hro">
+        {% if messages %}
+        {% for message in messages %}
+        <div class="alert alert-success" role="alert">
+          {{ message }}
         </div>
-        <div class="col-md-5 wow fadeInUp" data-wow-delay="600ms">
-          <h4>A presença on-line da sua empresa.</h4>
-          <p class="text-justify">Nossos sites são incríveis, fáceis de usar e direcionam as operações de nossos clientes. Transformamos as experiências on-line porque nos orgulhamos de nosso trabalho e apoiamos nossos produtos.</p>
+        {% endfor %}
+        {% else %}
+        <div class="card bg-card shadow-sm">
+          <div class="card-body">
+            <form method="post">
+              {% csrf_token %}
+              <div class="form-group text-left">
+                {{form.from_name|as_crispy_field}}
+              </div>
+              <div class="form-group text-left">
+                {{form.from_email|as_crispy_field}}
+              </div>
+              <div class="form-group text-left">
+                {{form.message|as_crispy_field}}
+              </div>
+              <div class="form-group text-left">
+                {{form.newslleter|as_crispy_field}}
+              </div>
+
+              <button type="submit" class="btn btn-outline-secondary btn-block">Enviar</button>
+            </form>
+          </div>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+<div class="strip">
+  <div class="container">
+    <div class="row justify-content-around">
+      <div class="col-md-auto">
+        <h4 class="mt-2">Temos a solução ideal para o seu negócio!</h4>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="strip-h">
+  <div class="container-fluid">
+    <div class="row d-flex justify-content-center align-items-center">
+      <div class="col-md-4 mb-3">
+        <div class="card text-right bg-card shadow-sm wow fadeInLeft">
+          <div class="card-body">
+            <h5 class="card-title text-center">Google Ads</h5>
+            <hr class="hro">
+            <p class="card-text text-justify">Criação e Administração de campanhas do Google Ads. Apareceça nas primeiras páginas.</p>
+            <a href="{% url 'paidads' %}" class="btn btn-outline-secondary btn-sm text-right">+ Ads &#8599;</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="card text-right shadow-sm wow fadeInLeft" data-wow-delay="100ms">
+          <div class="card-body">
+            <h5 class="card-title text-center">Pesquisa Orgânica</h5>
+            <hr class="hro">
+            <p class="card-text text-justify">Aumente a visibilidade de seu negócio nas pesquisas orgânicas do google, Bing, Yahoo e outros buscadores!</p>
+            <a href="{% url 'paidads' %}#Organic" class="btn btn-outline-secondary btn-sm text-right">+ Search &#8599;</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="card text-right bg-card shadow-sm wow fadeInLeft" data-wow-delay="200ms">
+          <div class=" card-body">
+            <h5 class="card-title text-center">Identidade Visual</h5>
+            <hr class="hro">
+            <p class="card-text text-justify">Confecção de um logótipo visual capaz de representar a assinatura institucional da empresa.</p>
+            <a href="{% url 'ivisual' %}" class="btn btn-outline-secondary btn-sm text-right">+ Visual &#8599;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row d-flex justify-content-center align-items-center mb-3">
+      <div class="col-md-4 mb-3">
+        <div class="card text-right shadow-sm wow fadeInLeft" data-wow-delay="300ms">
+          <div class=" card-body">
+            <h5 class="card-title text-center">Email Marketing</h5>
+            <hr class="hro">
+            <p class="card-text text-justify">Criação da arte e envios de email marketing de sua empresa, com relatório de alcance.</p>
+            <a href="{% url 'emkt' %}" class="btn btn-outline-secondary btn-sm text-right">+ Email &#8599;</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="card text-right bg-card shadow-sm wow fadeInLeft" data-wow-delay="400ms">
+          <div class="card-body">
+            <h5 class="card-title text-center">Auditoria SEO</h5>
+            <hr class="hro">
+            <p class="card-text text-justify">Identificamos se existem problemas de SEO no seu site que impeçam um melhor ranqueamento nas buscas.</p>
+            <a href="{% url 'seo' %}" class="btn btn-outline-secondary btn-sm text-right">+ SEO &#8599;</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="card text-right shadow-sm wow fadeInLeft" data-wow-delay="500ms">
+          <div class="card-body">
+            <h5 class="card-title text-center">Criação de Sites</h5>
+            <hr class="hro">
+            <p class="card-text text-justify">Ter um site não é mais um diferencial no mercado: se tornou essencial para sobreviver e prosperar.</p>
+            <a href="{% url 'webdesign' %}" class="btn btn-outline-secondary btn-sm text-right">+ Sites &#8599;</a>
+          </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="strip-h shadow">
-    <div class="container">
-      <h3 class="text-center mb-4">Otimização para mecanismos de busca (SEO)</h3>
+</div>
+<div class="strip-i">
+  <h3>Seja um novo site ou uma reformulação do seu site existente, adoraríamos trabalhar com você!</h3>
+  <p class="lead">Fornecemos soluções de design de sites e marketing digital para todo tipo de empresa,<br>
+    temos certeza de que podemos ajudá-lo a realizar o potencial de seus sonhos digitais.</p>
+  <div class="row d-flex justify-content-center align-items-center mb-4">
+    <div class="col-md-3 box m-2 rounded wow fadeInUpBig">
+      <h3>Responsivo</h3>
       <hr class="hro">
-      <div class="row no-gutters d-flex justify-content-center align-items-start">
-        <div class="col-md-7">
-          <p class="wow fadeInUp">Você provavelmente se deparou com nosso site pesquisando Web Design, Web Developer ou algo similar. É isso que pretendemos fazer por você, atrair visitantes que procuram seus produtos ou serviços para seu site e ajudar a expandir seus negócios.</p>
-          <p class="wow fadeInUp" data-wow-delay="200ms">Se você está procurando uma empresa de SEO para ajudá-lo a alcançar seus objetivos de negócios, veio ao lugar certo. Utilizamos apenas técnicas éticas de SEO e usamos boas pesquisas antiquadas para
-            complementar ferramentas especializadas, para nos permitir criar uma estratégia vencedora para otimizar seu site.</p>
-          <p class="wow fadeInUp" data-wow-delay="300ms">O principal objetivo da otimização de mecanismo de pesquisa (SEO) é aumentar a posição do seu site nas páginas de resultados de mecanismos de pesquisa, o que resultará em mais tráfego.</p>
-          <p class="example wow fadeInUp" data-wow-delay="400ms">Exemplo:
-            <br>
-            <i>
-              Uma pessoa pode estar procurando ótimos lugares para comer no Brooklin. Se você é um restaurante e está no Brooklin e tem um site otimizado adequadamente, o site deve aparecer na primeira página ou nos dois primeiros resultados de cada mecanismo de
-              pesquisa.</i>
-          </p>
-          <p class="wow fadeInUp" data-wow-delay="500ms">Se implementado dentro das diretrizes dos mecanismos de pesquisa, o SEO é endossado pelo Google e por outros mecanismos de pesquisa, pois resulta em páginas estruturadas de forma a facilitar o trabalho
-            dos mecanismos de pesquisa e fornecer informações úteis aos visitantes. É uma situação em que todos saem ganhando!</p>
-          <p class="wow fadeInUp" data-wow-delay="600ms">Trabalharemos com você para criar uma estratégia para otimizar seu site. Isso pode ser implementado por nós ou podemos aconselhá-lo sobre como fazer as alterações necessárias no seu site para melhorá-lo.
-            Quer o seu site tenha sido projetado pela MpGAdweb ou por outra agência ou designer freelancer, podemos ajudar a aumentar a presença do seu mecanismo de pesquisa.</p>
-        </div>
-        <div class="col-md-4 offset-md-1 text-center wow fadeInUp" data-wow-delay="300ms">
-          <h4>Dúvidas?</h4>
-          <hr class="hro">
-          {% if messages %}
-            {% for message in messages %}
-              <div class="alert alert-success" role="alert">
-                {{ message }}
-              </div>
-            {% endfor %}
-          {% else %}
-            <div class="card bg-card shadow-sm">
-              <div class="card-body">
-                <form method="post">
-                  {% csrf_token %}
-                  <div class="form-group text-left">
-                    {{form.from_name|as_crispy_field}}
-                  </div>
-                  <div class="form-group text-left">
-                    {{form.from_email|as_crispy_field}}
-                  </div>
-                  <div class="form-group text-left">
-                    {{form.message|as_crispy_field}}
-                  </div>
-                  <div class="form-group text-left">
-                    {{form.newslleter|as_crispy_field}}
-                  </div>
+      <p class="text-justify">
+        60% dos brasileiros usam um smartphone para fazer as buscas na internet. Nossos layouts estão prontos para todos os tipos de tela.
+      </p>
+    </div>
+    <div class="col-md-3 box m-2 rounded wow fadeInUpBig" data-wow-delay="100ms">
+      <h3>Otimizado</h3>
+      <hr class="hro">
 
-                  <button type="submit" class="btn btn-outline-secondary btn-block">Enviar</button>
-                </form>
-              </div>
-            </div>
-          {% endif %}
-        </div>
-      </div>
+      <p class="text-justify">
+        Todos os nossos projetos são otimizados para SEO, todo o conteúdo é preparado para estar no topo do ranqueamento dos buscadores mais importantes.
+      </p>
     </div>
-  </div>
-  <div class="strip">
-    <div class="container">
-      <div class="row justify-content-around">
-        <div class="col-md-auto">
-          <h4 class="mt-2">Temos a solução ideal para o seu negócio!</h4>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="strip-h">
-    <div class="container-fluid">
-      <div class="row d-flex justify-content-center align-items-center">
-        <div class="col-md-4 mb-3">
-          <div class="card text-right bg-card shadow-sm wow fadeInLeft">
-            <div class="card-body">
-              <h5 class="card-title text-center">Google Ads</h5>
-              <hr class="hro">
-              <p class="card-text text-justify">Criação e Administração de campanhas do Google Ads. Apareceça nas primeiras páginas.</p>
-              <a href="{% url 'paidads' %}" class="btn btn-outline-secondary btn-sm text-right">+ Ads &#8599;</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 mb-3">
-          <div class="card text-right shadow-sm wow fadeInLeft" data-wow-delay="100ms">
-            <div class="card-body">
-              <h5 class="card-title text-center">Pesquisa Orgânica</h5>
-              <hr class="hro">
-              <p class="card-text text-justify">Aumente a visibilidade de seu negócio nas pesquisas orgânicas do google, Bing, Yahoo e outros buscadores!</p>
-              <a href="{% url 'paidads' %}#Organic" class="btn btn-outline-secondary btn-sm text-right">+ Search &#8599;</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 mb-3">
-          <div class="card text-right bg-card shadow-sm wow fadeInLeft" data-wow-delay="200ms">
-            <div class=" card-body">
-              <h5 class="card-title text-center">Identidade Visual</h5>
-              <hr class="hro">
-              <p class="card-text text-justify">Confecção de um logótipo visual capaz de representar a assinatura institucional da empresa.</p>
-              <a href="{% url 'ivisual' %}" class="btn btn-outline-secondary btn-sm text-right">+ Visual &#8599;</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row d-flex justify-content-center align-items-center mb-3">
-        <div class="col-md-4 mb-3">
-          <div class="card text-right shadow-sm wow fadeInLeft" data-wow-delay="300ms">
-            <div class=" card-body">
-              <h5 class="card-title text-center">Email Marketing</h5>
-              <hr class="hro">
-              <p class="card-text text-justify">Criação da arte e envios de email marketing de sua empresa, com relatório de alcance.</p>
-              <a href="{% url 'emkt' %}" class="btn btn-outline-secondary btn-sm text-right">+ Email &#8599;</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 mb-3">
-          <div class="card text-right bg-card shadow-sm wow fadeInLeft" data-wow-delay="400ms">
-            <div class="card-body">
-              <h5 class="card-title text-center">Auditoria SEO</h5>
-              <hr class="hro">
-              <p class="card-text text-justify">Identificamos se existem problemas de SEO no seu site que impeçam um melhor ranqueamento nas buscas.</p>
-              <a href="{% url 'seo' %}" class="btn btn-outline-secondary btn-sm text-right">+ SEO &#8599;</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 mb-3">
-          <div class="card text-right shadow-sm wow fadeInLeft" data-wow-delay="500ms">
-            <div class="card-body">
-              <h5 class="card-title text-center">Criação de Sites</h5>
-              <hr class="hro">
-              <p class="card-text text-justify">Ter um site não é mais um diferencial no mercado: se tornou essencial para sobreviver e prosperar.</p>
-              <a href="{% url 'webdesign' %}" class="btn btn-outline-secondary btn-sm text-right">+ Sites &#8599;</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="strip-i">
-    <h3>Seja um novo site ou uma reformulação do seu site existente, adoraríamos trabalhar com você!</h3>
-    <p class="lead">Fornecemos soluções de design de sites e marketing digital para todo tipo de empresa,<br>
-      temos certeza de que podemos ajudá-lo a realizar o potencial de seus sonhos digitais.</p>
-    <div class="row d-flex justify-content-center align-items-center mb-4">
-      <div class="col-md-3 box m-2 rounded wow fadeInUpBig">
-        <h3>Responsivo</h3>
-        <hr class="hro">
-        <p class="text-justify">
-          60% dos brasileiros usam um smartphone para fazer as buscas na internet. Nossos layouts estão prontos para todos os tipos de tela.
-        </p>
-      </div>
-      <div class="col-md-3 box m-2 rounded wow fadeInUpBig" data-wow-delay="100ms">
-        <h3>Otimizado</h3>
-        <hr class="hro">
+    <div class="col-md-3 box m-2 rounded wow fadeInUpBig" data-wow-delay="200ms">
+      <h3>Atualizado</h3>
+      <hr class="hro">
 
-        <p class="text-justify">
-          Todos os nossos projetos são otimizados para SEO, todo o conteúdo é preparado para estar no topo do ranqueamento dos buscadores mais importantes.
-        </p>
-      </div>
-      <div class="col-md-3 box m-2 rounded wow fadeInUpBig" data-wow-delay="200ms">
-        <h3>Atualizado</h3>
-        <hr class="hro">
-
-        <p class="text-justify">
-          Deixamos seu site sempre atualizado, com as mais recentes diretrizes dos sites de busca. Ex.: Google, Bing, Yahoo e em + de 100 outros buscadores.
-        </p>
-      </div>
-    </div>
-
-  </div>
-  <div class="strip-h">
-    <div class="container">
-      <h3 class="text-center">Aplicativos Web e Bancos de Dados personalizados na nuvem</h3>
-      <p class="text-left">Como você gostaria de trabalhar em qualquer lugar (bem, em qualquer lugar com uma conexão à Internet) e de usar qualquer computador que escolher, desde que tenha um navegador da web?</p>
-      <p>Desenvolvemos soluções personalizadas para várias empresas.</p>
-      <h4 class="font-weight-bolder text-left">6 benefícios de aplicativos baseados na Web:</h4>
-      <ol class="small text-left">
-        <li>Acesse com segurança os dados da sua empresa a partir de qualquer dispositivo conectado à Internet</li>
-        <li>Gerencie o acesso do usuário aos seus dados comerciais sem um gerente de TI</li>
-        <li>Nenhum software para instalar em seus computadores</li>
-        <li>Menor custo devido ao desenvolvimento mais fácil e menores custos de suporte</li>
-        <li>Compartilhamento mais fácil de dados entre diferentes sistemas e locais de negócios</li>
-        <li>Desenvolvimento mais rápido de novos recursos e personalizações</li>
-      </ol>
+      <p class="text-justify">
+        Deixamos seu site sempre atualizado, com as mais recentes diretrizes dos sites de busca. Ex.: Google, Bing, Yahoo e em + de 100 outros buscadores.
+      </p>
     </div>
   </div>
+
+</div>
+<div class="strip-h">
+  <div class="container">
+    <h3 class="text-center">Aplicativos Web e Bancos de Dados personalizados na nuvem</h3>
+    <p class="text-left">Como você gostaria de trabalhar em qualquer lugar (bem, em qualquer lugar com uma conexão à Internet) e de usar qualquer computador que escolher, desde que tenha um navegador da web?</p>
+    <p>Desenvolvemos soluções personalizadas para várias empresas.</p>
+    <h4 class="font-weight-bolder text-left">6 benefícios de aplicativos baseados na Web:</h4>
+    <ol class="small text-left">
+      <li>Acesse com segurança os dados da sua empresa a partir de qualquer dispositivo conectado à Internet</li>
+      <li>Gerencie o acesso do usuário aos seus dados comerciais sem um gerente de TI</li>
+      <li>Nenhum software para instalar em seus computadores</li>
+      <li>Menor custo devido ao desenvolvimento mais fácil e menores custos de suporte</li>
+      <li>Compartilhamento mais fácil de dados entre diferentes sistemas e locais de negócios</li>
+      <li>Desenvolvimento mais rápido de novos recursos e personalizações</li>
+    </ol>
+  </div>
+</div>
+
 {% endblock content %}

@@ -23,14 +23,15 @@
       </div>
       <div class="col-md-3 mb-3">
         <h6 class="text-left"><small class="text-muted">Cliente:</small> <br>{{qs.client}}</h6>
-      </div>
-      <div class="col-md-3">
-        <h6 class=" text-left"><small class="text-muted">Soluções usadas:</small> <br>
-          <p>{{qs.soluctions}}</p>
-        </h6>
+        <p>&nbsp;</p>
         <p>&nbsp;</p>
         <h6 class="text-left"><small class="text-muted">Data do projeto:</small> <br>
           <p>{{qs.project_date}}</p>
+        </h6>
+      </div>
+      <div class="col-md-3">
+        <h6 class=" text-left"><small class="text-muted">Soluções usadas:</small> <br>
+          <p>{{qs.soluctions|linebreaks}}</p>
         </h6>
       </div>
     </div>

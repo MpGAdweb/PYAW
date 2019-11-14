@@ -33,8 +33,7 @@ def detail(request, slug):
         qs = Project.objects.get(slug = slug)
     except Project.DoesNotExist:
         raise Http404("Project does not exist")
-    d_list = Project.objects.values_list('soluctions', flat=True).order_by('soluctions')
-    return render(request, 'Projects/projects.html', {'qs': qs, 'd_list': d_list, 'title': title})
+    return render(request, 'Projects/projects.html', {'qs': qs, 'title': title})
 
 def about(request):
     title = "MpG_\Adweb! - Sobre nós"

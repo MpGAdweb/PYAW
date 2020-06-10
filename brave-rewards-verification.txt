@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: pythonanywhere.com
+Token: cbe5e026827bf7591290710600041b24c892d003bbb2e6c946c3340f761896d6
